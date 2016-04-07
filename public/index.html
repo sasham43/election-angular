@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="electionApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Election 2016</title>
+
+    <!-- Libraries -->
+    <script src="angular.min.js"></script>
+
+    <!-- My development -->
+    <script src="client.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body ng-controller="ElectionController">
+    <h1>Election!</h1>
+
+    <div class="buttonContainer">
+      <button ng-click="listPoliticians()">List Politicians</button>
+      <button ng-click="pickWinner()">Pick Winner</button>
+    </div>
+
+    <div class="listContainer">
+      Democrats
+      <ul class="dems">
+        <li ng-repeat="dem in dems">
+          {{dem}}
+        </li>
+      </ul>
+      Republicans
+      <ul class="repubs">
+        <li ng-repeat="repub in repubs">
+          {{repub}}
+        </li>
+      </ul>
+    </div>
+    <div class="winner">
+      {{winner}}
+    </div>
+  </body>
+</html>
