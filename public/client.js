@@ -6,6 +6,8 @@ app.controller('ElectionController', function($scope, $http){
   $scope.dems = [];
   $scope.repubs = [];
 
+    $scope.winnerPicked = false;
+
   $scope.listPoliticians = function(){
     $http.get('/democrats').then(function(response){
       console.log(response);
@@ -30,7 +32,7 @@ app.controller('ElectionController', function($scope, $http){
 
     var winnerPicker = Math.floor(Math.random() * 10);
     $scope.winner = winnerList[winnerPicker];
-
+    $scope.winnerPicked = true;
   }
 
 });

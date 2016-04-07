@@ -1,5 +1,6 @@
 body{
-  background-color: lavender;
+  background-color: blue;
+  color: white;
   font-family: sans-serif;
 }
 
@@ -10,4 +11,17 @@ h1{
 .buttonContainer{
   /*margin: 0 auto 0 auto;*/
   text-align: center;
+}
+
+li:nth-child(even){
+  background-color: red;
+}
+
+li:nth-child(odd){
+  background-color: white;
+  color: red;
+}
+
+.winner{
+text-align: center;
 }

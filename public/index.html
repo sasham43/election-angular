@@ -20,21 +20,26 @@
     </div>
 
     <div class="listContainer">
-      Democrats
+      Democrats:
       <ul class="dems">
         <li ng-repeat="dem in dems">
           {{dem}}
         </li>
       </ul>
-      Republicans
+      Republicans:
       <ul class="repubs">
         <li ng-repeat="repub in repubs">
           {{repub}}
         </li>
       </ul>
     </div>
+    Winner:
     <div class="winner">
+      <p>
       {{winner}}
+    </p>
+      <img src="eagle.gif" ng-show="winnerPicked" />
+
     </div>
   </body>
 </html>
